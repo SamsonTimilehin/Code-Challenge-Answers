@@ -12,7 +12,7 @@ public class CountDuplicateCharacter {
         String str = String.valueOf(Character.toChars(128149));
         System.out.println(str);
 
-        System.out.println(countDuplicateCharacterUsingCodePoint("\uD83D\uDC95\uD83D\uDC4D\uD83D\uDC95"));
+        System.out.println(countDuplicateCharacterUsingCodePoint("\uD83D\uDC95\uD83D\uDC4D\uD83D\uDC95soon"));
     }
     public static Map<Character, Integer> countDuplicateCharacters(String str) {
         Map<Character, Integer> result = new HashMap<>();
