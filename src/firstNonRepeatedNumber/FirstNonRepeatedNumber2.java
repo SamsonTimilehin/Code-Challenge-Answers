@@ -2,12 +2,15 @@ package firstNonRepeatedNumber;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
+import java.util.Scanner;
 
 public class FirstNonRepeatedNumber2 {
 
     public static void main(String[] args) {
 
-        System.out.println(firstNonRepeatedCharacter2("7yrr"));
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter value");
+        System.out.println("First non-repeated Character is : "+ firstNonRepeatedCharacter2( input.nextLine()));
     }
 
     public static char firstNonRepeatedCharacter2(String str) {

@@ -5,6 +5,8 @@ public class IntStreamInterface {
     public static void main(String[] args) {
 
         displayUsingIntStream();
+        int i = 5;
+        System.out.println(i << 2);
     }
 
     public static void displayUsingIntStream(){

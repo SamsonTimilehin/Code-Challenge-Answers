@@ -1,9 +1,13 @@
+import java.util.Scanner;
+
 public class TwoSum {
 
     public static void main(String[] args) {
 
         int[] nums = {2, 7, 11, 15};
-        int[] result = twoSum(nums, 13);
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter Target");
+        int[] result = twoSum(nums, input.nextInt());
         for (int i : result) {
             System.out.println(i);
         }
