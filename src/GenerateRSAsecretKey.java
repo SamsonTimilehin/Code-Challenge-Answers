@@ -14,7 +14,7 @@ public class GenerateRSAsecretKey {
             KeyPairGenerator keyPairGenerator = KeyPairGenerator.getInstance(algorithm);
 
             // Initialize the key pair generator with a key size (e.g., 2048 bits)
-            keyPairGenerator.initialize(2048);
+            keyPairGenerator.initialize(512);
 
             // Generate a key pair
             KeyPair keyPair = keyPairGenerator.generateKeyPair();
