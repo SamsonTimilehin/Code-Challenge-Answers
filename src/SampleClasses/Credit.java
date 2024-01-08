@@ -10,6 +10,9 @@ public class Credit {
         this.rate = rate;
         this.amount = amount;
     }
+    public Credit (double amount){
+        this.amount = amount;
+    }
 
     @Override
     public String toString() {
