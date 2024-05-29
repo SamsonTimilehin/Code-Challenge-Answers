@@ -1,7 +1,8 @@
 import java.util.Arrays;
 import java.util.Base64;
 import java.util.Map;
-import java.util.stream.Stream;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 public class ReverseLettersAndWords {
 
@@ -22,6 +23,11 @@ public class ReverseLettersAndWords {
         System.out.println("decode  "+decodedString);
         System.out.println(divide(10,0));
         System.out.println(romanToInt("MCMXCIV"));
+
+        System.out.println("================ Reverse String without any Library ===================");
+        System.out.println(reverseString("Hello World"));
+        System.out.println(reverseStringLambdasStringBuilder("Hellop"));
+        System.out.println(reverseStringStringBuilder("good"));
 
     }
 
@@ -80,5 +86,38 @@ public class ReverseLettersAndWords {
             }
         }
         return result;
+    }
+
+    private static String reverseString(String input) {
+        char[] charArray = input.toCharArray();
+        int left = 0;
+        int right = charArray.length - 1;
+
+        while (left < right) {
+            // Swap characters at left and right indices
+            char temp = charArray[left];
+            charArray[left] = charArray[right];
+            charArray[right] = temp;
+
+            // Move towards the center
+            left++;
+            right--;
+        }
+
+        return new String(charArray);
+    }
+
+    private static String reverseStringLambdasStringBuilder(String input) {
+        return IntStream.range(0, input.length())
+                .mapToObj(i -> input.charAt(input.length() - 1 - i))
+                .map(String::valueOf)
+                .collect(Collectors.joining());
+    }
+    private static String reverseStringStringBuilder(String input) {
+        StringBuilder reversed = new StringBuilder();
+        for (int i = input.length() - 1; i >= 0; i--) {
+            reversed.append(input.charAt(i));
+        }
+        return reversed.toString();
     }
 }
